@@ -1,0 +1,13 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+    <h1>Hello Dora</h1>
+    <p>Hello everyone!!!. My name is {{ name }}</p>
+    <h2>List name !!!!</h2>
+    <ul>
+        {% for item in listname %}
+            {% if item != "Dora" %}
+                <li>{{ item }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}

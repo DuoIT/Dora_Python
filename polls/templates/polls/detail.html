@@ -1,0 +1,13 @@
+{% extends 'polls/base.html' %}
+
+{% block content1 %}
+    {% if listquestion %}
+        <ul>
+            {% for item in listquestion %}
+                <li>{{item.pub_date}}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3 style="color: aquamarine">No content display!!</h3>
+    {% endif %}
+{% endblock %}

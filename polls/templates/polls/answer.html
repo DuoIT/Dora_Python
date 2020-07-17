@@ -1,0 +1,18 @@
+{% extends 'polls/base.html'%}
+
+{% block content3 %}
+{% if listanswer %}
+<ul>
+    {% for item in listanswer %}
+    <li>
+        {{ item.choice_text }}
+    </li>
+    <li>
+        {{ item.votes }}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<h3 style="color: brown">No content!!!</h3>
+{% endif %}
+{% endblock %}
